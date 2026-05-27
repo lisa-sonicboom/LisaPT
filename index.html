@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lisa — Personal Training in Porto, Bonfim</title>
-  <meta name="description" content="Personal training in Bonfim, Porto. One-to-one coaching tailored to you. Book a free session to see if we're a match." />
+  <title>Coach Lisa — Personal Training in Porto, Bonfim</title>
+  <meta name="description" content="1:1 personal training in Bonfim, Porto. Strength, mobility, conditioning — programmed around you. Book a free session to see if we're a match." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
     <div class="nav__inner">
       <a href="#top" class="nav__brand">
         <span class="nav__brand-mark">L</span>
-        <span class="nav__brand-name">Lisa <em>·</em> Personal Training</span>
+        <span class="nav__brand-name">Coach Lisa <em>·</em> Personal Training</span>
       </a>
       <nav class="nav__links" aria-label="Primary">
         <a href="#approach">Approach</a>
@@ -30,23 +30,28 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO with full-bleed image -->
   <section class="hero" id="top">
-    <div class="hero__grid">
+    <div class="hero__media" aria-hidden="true">
+      <img src="img/lisa-beach.jpg" alt="" class="hero__img" />
+      <div class="hero__media-overlay"></div>
+    </div>
+
+    <div class="hero__content">
       <div class="hero__eyebrow">
-        <span class="dot"></span> Now training in Bonfim, Porto
+        <span class="dot"></span> Now training in Porto, Bonfim area
       </div>
 
       <h1 class="hero__title">
-        Personal training,<br>
-        <em>built for you</em> —<br>
-        not a template.
+        1:1 personal training<br>
+        in Porto, <em>designed around<br>
+        your life.</em>
       </h1>
 
       <p class="hero__lede">
-        One-to-one coaching in the heart of Bonfim. Strength, mobility, endurance,
-        body composition — programmed around <em>your</em> life, your history, and what you
-        actually want to feel like.
+        One-to-one coaching in Bonfim. Strength, mobility, endurance,
+        body composition — programmed around <em>your</em> goals, history,
+        and what you actually want to feel like.
       </p>
 
       <div class="hero__cta-row">
@@ -54,7 +59,7 @@
           Book a free session
           <span class="btn__arrow" aria-hidden="true">→</span>
         </a>
-        <a href="#approach" class="btn btn--ghost">See how it works</a>
+        <a href="#approach" class="btn btn--ghost-light">See how it works</a>
       </div>
 
       <div class="hero__proof">
@@ -66,12 +71,12 @@
       </div>
     </div>
 
-    <aside class="hero__card" aria-label="Quick intro">
+    <aside class="hero__card" aria-label="Free session offer">
       <div class="hero__card-label">No. 01 — Free Session</div>
       <h2 class="hero__card-title">See if we're a match.</h2>
       <p class="hero__card-text">
-        Your first 60 minutes with me are on the house. We'll talk about your goals,
-        run a light movement assessment, and train. If it clicks, we continue.
+        Your first 60 minutes with me are on the house. We'll talk through your goals,
+        run a light movement assessment, and train together. If it clicks, we continue.
         If not, no pressure — you'll still leave with something useful.
       </p>
       <a href="#book" class="hero__card-cta">Claim your free session →</a>
@@ -89,45 +94,54 @@
       <span>Mobility</span><span>·</span>
       <span>Conditioning</span><span>·</span>
       <span>Body Composition</span><span>·</span>
-      <span>Running</span><span>·</span>
+      <span>Calisthenics</span><span>·</span>
       <span>Posture</span><span>·</span>
       <span>Longevity</span><span>·</span>
       <span>Strength</span><span>·</span>
       <span>Mobility</span><span>·</span>
       <span>Conditioning</span><span>·</span>
       <span>Body Composition</span><span>·</span>
-      <span>Running</span><span>·</span>
+      <span>Calisthenics</span><span>·</span>
       <span>Posture</span><span>·</span>
       <span>Longevity</span><span>·</span>
     </div>
   </div>
 
-  <!-- APPROACH -->
+  <!-- APPROACH (with coaching image) -->
   <section class="approach" id="approach">
-    <div class="section__head">
-      <span class="section__kicker">01 — Approach</span>
-      <h2 class="section__title">No templates.<br><em>No guesswork.</em></h2>
-      <p class="section__lede">
-        Every client arrives with a different body, history and goal.
-        The training reflects that — from the first session to the hundredth.
-      </p>
+    <div class="approach__inner">
+      <div class="approach__image">
+        <figure class="approach__frame">
+          <img src="img/lisa-coaching.jpg" alt="Lisa coaching a client through a banded exercise" />
+          <figcaption class="approach__frame-cap">In session <em>—</em> coaching, not counting reps</figcaption>
+        </figure>
+      </div>
+
+      <div class="approach__text">
+        <span class="section__kicker">01 — Approach</span>
+        <h2 class="section__title">No cookie-cutter templates.<br><em>No one-size-fits-all.</em></h2>
+        <p class="section__lede">
+          Every client arrives with a different body, history and goal.
+          The training reflects that — from the first session to the hundredth.
+        </p>
+      </div>
     </div>
 
     <div class="approach__grid">
       <article class="approach__card">
         <div class="approach__num">i.</div>
         <h3>Listen first</h3>
-        <p>We start with your story — injuries, sleep, stress, schedule, what's worked and what's burned you out. Programming without this is guessing.</p>
+        <p>We start with your story — injuries, sleep, stress, current schedule, what's worked and what's burned you out before.</p>
       </article>
       <article class="approach__card">
         <div class="approach__num">ii.</div>
         <h3>Assess, then program</h3>
-        <p>A light movement screen shows me where you're strong, where you're locked up, and where to start. Your plan is written for <em>your</em> body.</p>
+        <p>A light movement screen shows me where you're strong, where you have restrictions, and where to start. Your plan is written for <em>your</em> body.</p>
       </article>
       <article class="approach__card">
         <div class="approach__num">iii.</div>
         <h3>Train with intent</h3>
-        <p>Sessions are focused and technical, not chaotic. You'll know why every exercise is there and what it's doing for you.</p>
+        <p>Sessions are focused and technical. You'll know why every exercise is there and what it's doing for you.</p>
       </article>
       <article class="approach__card">
         <div class="approach__num">iv.</div>
@@ -137,15 +151,20 @@
     </div>
   </section>
 
-  <!-- TRAINING / SERVICES -->
+  <!-- TRAINING (with handstand image) -->
   <section class="training" id="training">
-    <div class="section__head section__head--light">
-      <span class="section__kicker">02 — Training</span>
-      <h2 class="section__title">What we can work on <em>together</em>.</h2>
-      <p class="section__lede">
-        A mix, personalised to you. Most clients blend two or three of these —
-        rarely just one.
-      </p>
+    <div class="training__head">
+      <div class="training__head-text">
+        <span class="section__kicker section__kicker--light">02 — Training</span>
+        <h2 class="section__title">What we can work on <em>together</em>.</h2>
+        <p class="section__lede section__lede--light">
+          A mix, personalised to you. Most clients blend two or three of these —
+          rarely just one.
+        </p>
+      </div>
+      <figure class="training__image">
+        <img src="img/lisa-handstand.jpg" alt="Lisa holding a handstand against a wall" />
+      </figure>
     </div>
 
     <div class="training__grid">
@@ -155,35 +174,36 @@
       </div>
       <div class="training__item">
         <h3>Mobility &amp; Posture</h3>
-        <p>Undo what desks and long flights have done. Move better, sit without aching, stand taller.</p>
+        <p>Undo what desks and long periods of sitting have done. Move better, sit without aching, stand taller.</p>
       </div>
       <div class="training__item">
-        <h3>Conditioning &amp; Endurance</h3>
-        <p>Running, intervals, heart and lung work — dialled to your level, not a bootcamp template.</p>
+        <h3>Conditioning &amp; HIIT</h3>
+        <p>Intervals, high-intensity, heart and lung work — dialled to your level, not in a bootcamp style.</p>
       </div>
       <div class="training__item">
         <h3>Return to Training</h3>
-        <p>Coming back from injury, pregnancy, a long pause, or a new city? We'll rebuild the base carefully.</p>
+        <p>Coming back from injury or a long pause, or a new city? We'll rebuild the base carefully.</p>
       </div>
       <div class="training__item">
         <h3>Longevity &amp; Everyday Strength</h3>
         <p>Train for the next thirty years, not the next thirty days. Joints, balance, resilience, energy.</p>
       </div>
       <div class="training__item">
-        <h3>Event &amp; Goal Prep</h3>
-        <p>A race, a trek, a wedding, a milestone birthday — a clear runway with a clear outcome.</p>
+        <h3>Calisthenics &amp; Skills</h3>
+        <p>Pull-ups, handstands, levers — bodyweight skill work for the curious. Strength you can show.</p>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ABOUT (with studio portrait) -->
   <section class="about" id="about">
     <div class="about__inner">
-      <div class="about__media" aria-hidden="true">
-        <div class="about__media-frame">
-          <div class="about__media-label">Porto · Bonfim</div>
-          <div class="about__media-glyph">L</div>
-        </div>
+      <div class="about__media">
+        <figure class="about__media-frame">
+          <span class="about__media-label">Porto · Bonfim</span>
+          <img src="img/lisa-portrait.jpg" alt="Lisa, personal trainer in Bonfim, Porto" class="about__media-img" />
+          <figcaption class="about__media-caption">Lisa <em>—</em> your coach</figcaption>
+        </figure>
       </div>
 
       <div class="about__content">
@@ -193,13 +213,14 @@
           <em>Your coach.</em>
         </h2>
         <p>
-          I'm a personal trainer based in Bonfim, Porto, working with clients who
-          want to feel strong, capable and at home in their body — not
-          burn themselves out chasing someone else's version of fit.
+          I'm a personal trainer, working with clients who want to feel strong,
+          capable and at home in their body — not burn themselves out chasing
+          someone else's version of fit.
         </p>
         <p>
-          My background spans strength training, running, mobility and conditioning.
-          I coach in English and Portuguese, and most of my clients are expats
+          My background spans strength training, calisthenics, running, mobility and conditioning.
+          I'm certified through both the Australian and Portuguese fitness industry
+          and coach in English and Portuguese. Most of my clients are expats
           and residents in Porto looking for something more considered than a
           commercial gym floor.
         </p>
@@ -220,8 +241,10 @@
   <!-- PRICING -->
   <section class="pricing" id="pricing">
     <div class="section__head">
-      <span class="section__kicker">04 — Pricing</span>
-      <h2 class="section__title">Simple, <em>honest</em> rates.</h2>
+      <div>
+        <span class="section__kicker">04 — Pricing</span>
+        <h2 class="section__title">Simple <em>rates.</em></h2>
+      </div>
       <p class="section__lede">
         Always start with the free session. If we're a fit, choose how you'd like to train.
       </p>
@@ -232,11 +255,11 @@
         <div class="price-card__tag">Start here</div>
         <h3 class="price-card__name">Free Intro Session</h3>
         <div class="price-card__price"><span>€</span>0</div>
-        <p class="price-card__blurb">60 minutes. Conversation, assessment, a real training block. Zero obligation.</p>
+        <p class="price-card__blurb">60 minutes. Conversation, assessment, a sample workout targeted to your goals. Zero obligation.</p>
         <ul class="price-card__list">
           <li>Goal &amp; history conversation</li>
           <li>Movement assessment</li>
-          <li>A proper training session</li>
+          <li>A sample training session</li>
           <li>Clear plan if we continue</li>
         </ul>
         <a href="#book" class="btn btn--primary btn--full">Book the free session</a>
@@ -244,7 +267,7 @@
 
       <article class="price-card">
         <h3 class="price-card__name">Single Session</h3>
-        <div class="price-card__price"><span>€</span>45</div>
+        <div class="price-card__price"><span>€</span>40</div>
         <p class="price-card__blurb">One focused 1:1 hour. For clients who want flexibility or an occasional tune-up.</p>
         <ul class="price-card__list">
           <li>60-minute personalised session</li>
@@ -255,25 +278,24 @@
       </article>
 
       <article class="price-card">
-        <h3 class="price-card__name">10-Session Block</h3>
-        <div class="price-card__price"><span>€</span>400</div>
-        <p class="price-card__blurb">The sweet spot for real change. Programming evolves as you do.</p>
+        <h3 class="price-card__name">Monthly · 1× per week</h3>
+        <div class="price-card__price"><span>€</span>140<small>/mo</small></div>
+        <p class="price-card__blurb">€35 per session. Full program design &amp; ongoing support.</p>
         <ul class="price-card__list">
-          <li>10 × 60-minute sessions</li>
-          <li>Personalised program</li>
+          <li>4 × 60-minute sessions/mo</li>
+          <li>Personalised program &amp; adjustments</li>
           <li>Check-ins between sessions</li>
-          <li>Save €50 vs. single</li>
         </ul>
         <a href="#book" class="price-card__cta">Enquire →</a>
       </article>
 
       <article class="price-card">
-        <h3 class="price-card__name">Monthly Coaching</h3>
-        <div class="price-card__price"><span>€</span>320<small>/mo</small></div>
-        <p class="price-card__blurb">8 sessions a month plus full program design &amp; ongoing support.</p>
+        <h3 class="price-card__name">Monthly · 2× per week</h3>
+        <div class="price-card__price"><span>€</span>240<small>/mo</small></div>
+        <p class="price-card__blurb">€30 per session. The sweet spot for real change.</p>
         <ul class="price-card__list">
           <li>8 × 60-minute sessions/mo</li>
-          <li>Written program &amp; adjustments</li>
+          <li>Personalised program &amp; adjustments</li>
           <li>WhatsApp support between</li>
           <li>Priority booking</li>
         </ul>
@@ -287,23 +309,42 @@
     </p>
   </section>
 
-  <!-- TESTIMONIAL -->
-  <section class="quote">
-    <blockquote>
+  <!-- COMMUNITY / SOCIAL PROOF -->
+  <section class="community">
+    <div class="community__inner">
+      <figure class="community__image">
+        <img src="img/community.jpg" alt="Lisa with a group of training clients and friends" />
+      </figure>
+      <div class="community__text">
+        <span class="section__kicker">05 — People</span>
+        <h2 class="section__title section__title--tight">
+          Real people. <em>Real progress.</em>
+        </h2>
+        <p>
+          Some of the people I've trained, taught and learned from along the way.
+          What I love most about this work is watching clients grow into themselves —
+          stronger, more confident, more at home in their bodies.
+        </p>
+      </div>
+    </div>
+
+    <blockquote class="community__quote">
       <p>
-        <span class="quote__mark" aria-hidden="true">“</span>
+        <span class="quote__mark" aria-hidden="true">&ldquo;</span>
         Training with Lisa feels nothing like a gym. She listens, she adjusts,
         and every session actually makes sense. I'm stronger, calmer and in less pain than I've been in years.
       </p>
-      <footer>— Client, Porto</footer>
+      <footer>— [Client first name, Porto]</footer>
     </blockquote>
   </section>
 
   <!-- FAQ -->
   <section class="faq" id="faq">
     <div class="section__head">
-      <span class="section__kicker">05 — FAQ</span>
-      <h2 class="section__title">Good <em>questions</em>.</h2>
+      <div>
+        <span class="section__kicker">06 — FAQ</span>
+        <h2 class="section__title">Good <em>questions</em>.</h2>
+      </div>
     </div>
 
     <div class="faq__list">
@@ -317,19 +358,27 @@
       </details>
       <details class="faq__item">
         <summary>I'm a total beginner. Is this for me?</summary>
-        <p>Yes. A lot of my clients haven't trained seriously before, or are coming back after years away. Personal training is arguably <em>more</em> useful when you're starting — we get the foundations right so nothing hurts later.</p>
+        <p>Yes. Many of my clients haven't trained seriously before, or are coming back after years away. Personal training is arguably <em>more</em> useful when you're starting — we get the foundations right so nothing hurts later.</p>
       </details>
       <details class="faq__item">
         <summary>I'm already advanced. Can you still help?</summary>
-        <p>Absolutely. Advanced clients tend to need sharper programming, better recovery structure and an outside eye on technique. That's exactly what 1:1 is for.</p>
+        <p>Absolutely. Advanced clients tend to need sharper programming, better recovery structure and an outside eye on technique. That's exactly what I can help you with.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Do you offer online coaching?</summary>
+        <p>Yes. I can build you a personalised program delivered through my coaching app, or run live sessions over Zoom — prices are adjusted accordingly. <a href="#book">Message me</a> for details.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Do you take couples or duo sessions?</summary>
+        <p>Yes. Training with a partner or friend can be a great way to stay consistent and split the cost. Duo sessions are programmed for both of you and priced per pair — get in touch for current rates.</p>
       </details>
       <details class="faq__item">
         <summary>Do you speak English? Portuguese?</summary>
-        <p>Both. Sessions can be in either — whichever you're more comfortable with.</p>
+        <p>Both. Sessions can be in either — I can manage in Portuguese.</p>
       </details>
       <details class="faq__item">
         <summary>How often should I train?</summary>
-        <p>Most clients do 2–3 sessions per week. We'll decide together based on your goals, schedule and what your body can recover from.</p>
+        <p>Most clients benefit most from 2 sessions per week. We'll decide together based on your goals, schedule, budget and what your body can recover from.</p>
       </details>
       <details class="faq__item">
         <summary>What's your cancellation policy?</summary>
@@ -342,23 +391,27 @@
   <section class="book" id="book">
     <div class="book__inner">
       <div class="book__text">
-        <span class="section__kicker section__kicker--light">06 — Book</span>
+        <span class="section__kicker section__kicker--light">07 — Book</span>
         <h2 class="book__title">
           Let's see if we're<br>
           <em>a match.</em>
         </h2>
         <p class="book__lede">
-          Your first session is free — a proper 60 minutes, not a sales pitch.
-          Send a quick message and I'll get back to you within 24 hours with two or three times that could work.
+          Your first session is free — a proper 60 minutes.
+          Send a quick message and I'll get back to you within 24 hours
+          with two or three times that could work.
         </p>
         <ul class="book__points">
           <li>60 minutes, in Bonfim</li>
           <li>No card, no commitment</li>
           <li>English or Portuguese</li>
         </ul>
+        <div class="book__direct">
+          <a href="https://wa.me/61466243806" target="_blank" rel="noopener">Message me on WhatsApp →</a>
+        </div>
       </div>
 
-      <form class="book__form" onsubmit="event.preventDefault(); alert('Thanks — please email or WhatsApp me and I\\'ll get back to you within 24 hours.');">
+      <form class="book__form" onsubmit="event.preventDefault(); alert('Thanks — connect the form to Formspree or Netlify Forms, or message me directly on WhatsApp and I\\'ll get back to you within 24 hours.');">
         <div class="book__field">
           <label for="name">Name</label>
           <input id="name" name="name" type="text" required placeholder="Your name" />
@@ -383,17 +436,18 @@
       <div class="foot__brand">
         <div class="foot__mark">L</div>
         <div>
-          <div class="foot__name">Lisa · Personal Training</div>
+          <div class="foot__name">Coach Lisa · Personal Training</div>
           <div class="foot__loc">Bonfim, Porto · Portugal</div>
         </div>
       </div>
       <div class="foot__contact">
-        <a href="mailto:hello@example.com">hello@example.com</a>
-        <a href="https://wa.me/351000000000" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:lisa.koivunen@gmail.com">lisa.koivunen@gmail.com</a>
+        <a href="https://wa.me/61466243806" target="_blank" rel="noopener">WhatsApp · +61 466 243 806</a>
+        <a href="https://instagram.com/lisa_sonicboom" target="_blank" rel="noopener">@lisa_sonicboom</a>
       </div>
       <div class="foot__meta">
-        <span>© <span id="yr">2026</span> Lisa PT</span>
+        <span>© <span id="yr">2026</span> Coach Lisa PT</span>
+        <span>NIF: 326 781 617</span>
         <span>Made in Porto</span>
       </div>
     </div>
