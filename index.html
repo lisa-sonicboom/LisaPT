@@ -327,14 +327,76 @@
       </div>
     </div>
 
-    <blockquote class="community__quote">
-      <p>
-        <span class="quote__mark" aria-hidden="true">&ldquo;</span>
-        Training with Lisa feels nothing like a gym. She listens, she adjusts,
-        and every session actually makes sense. I'm stronger, calmer and in less pain than I've been in years.
-      </p>
-      <footer>— [Client first name, Porto]</footer>
-    </blockquote>
+    <div class="testimonials" aria-label="Client testimonials">
+      <div class="testimonials__track" id="testimonialsTrack">
+
+        <blockquote class="testimonial" data-index="0">
+          <span class="testimonial__mark" aria-hidden="true">&ldquo;</span>
+          <p class="testimonial__text">
+            Lisa really puts in efforts to the personalised experience and tailors the program
+            just for me. She's always very understanding and supportive throughout the program.
+            She's also great at communicating about details and feelings so I feel guided closely
+            even when the coaching is remote. Lisa's focus on women's health and physiological care
+            has helped me a lot in recovery and strength training. My favourite part about the program
+            is its sustainable approach &mdash; no fad diets or harsh training for &ldquo;instant&rdquo; effects,
+            but emphasising long term habit-building.
+          </p>
+          <footer class="testimonial__author">
+            <span class="testimonial__name">Sephira</span>
+            <span class="testimonial__loc">Sydney</span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial" data-index="1">
+          <span class="testimonial__mark" aria-hidden="true">&ldquo;</span>
+          <p class="testimonial__text">
+            I've been training with Lisa for several months, and it's been great. She's super kind
+            and brings a sense of humour to every session, making workouts genuinely enjoyable.
+            What I especially appreciate is her ability to adapt to my needs &mdash; whether my energy is low
+            or I'm on my period, she adjusts the workout thoughtfully &mdash; while still gently pushing me
+            beyond my comfort zone. Training with Lisa is challenging, empowering, and truly fun.
+            I highly recommend her.
+          </p>
+          <footer class="testimonial__author">
+            <span class="testimonial__name">Janina</span>
+            <span class="testimonial__loc">Porto</span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial" data-index="2">
+          <span class="testimonial__mark" aria-hidden="true">&ldquo;</span>
+          <p class="testimonial__text">
+            I'm a busy working mum, who sits at my desk all day and then pours all my energy
+            into the needs of my daughter. There is little to no time to prioritise myself and movement.
+            Lisa has made it so easy for me to navigate how to build strength in as little as 30 minutes
+            a day (during my lunch break). The exercises are super clear, consistent and I already feel
+            my body getting stronger. Since working with Lisa, my mood has shifted to be more uplifted
+            and happy. I'm also more motivated to eat well and even move more outside our sessions.
+            I've never been a gym goer and Lisa completely breaks down all of the exercises, which makes
+            me feel at ease and confident.
+          </p>
+          <footer class="testimonial__author">
+            <span class="testimonial__name">Jade</span>
+            <span class="testimonial__loc">Porto</span>
+          </footer>
+        </blockquote>
+
+      </div>
+
+      <div class="testimonials__controls">
+        <button class="testimonials__btn testimonials__btn--prev" id="testimonialsPrev" aria-label="Previous testimonial">
+          <span aria-hidden="true">←</span>
+        </button>
+        <div class="testimonials__dots" id="testimonialsDots" role="tablist">
+          <button class="testimonials__dot is-active" data-slide="0" aria-label="Testimonial 1"></button>
+          <button class="testimonials__dot" data-slide="1" aria-label="Testimonial 2"></button>
+          <button class="testimonials__dot" data-slide="2" aria-label="Testimonial 3"></button>
+        </div>
+        <button class="testimonials__btn testimonials__btn--next" id="testimonialsNext" aria-label="Next testimonial">
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </div>
   </section>
 
   <!-- FAQ -->
@@ -373,7 +435,7 @@
       </details>
       <details class="faq__item">
         <summary>Do you speak English? Portuguese?</summary>
-        <p>Both. Sessions can be in either English, Portuguese or in Finnish.</p>
+        <p>Both. Sessions can be in either English, Portuguese or Finnish.</p>
       </details>
       <details class="faq__item">
         <summary>How often should I train?</summary>
@@ -403,7 +465,7 @@
         <ul class="book__points">
           <li>60 minutes, in Bonfim</li>
           <li>No card, no commitment</li>
-          <li>English or Portuguese</li>
+          <li>English, Portuguese or Finnish</li>
         </ul>
         <div class="book__direct">
           <a href="https://wa.me/61466243806" target="_blank" rel="noopener">Message me on WhatsApp →</a>
@@ -454,6 +516,65 @@
 
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // ---- Testimonials carousel ----
+    (function () {
+      const track = document.getElementById('testimonialsTrack');
+      const dotsWrap = document.getElementById('testimonialsDots');
+      const prevBtn = document.getElementById('testimonialsPrev');
+      const nextBtn = document.getElementById('testimonialsNext');
+      if (!track || !dotsWrap || !prevBtn || !nextBtn) return;
+
+      const slides = track.querySelectorAll('.testimonial');
+      const dots = dotsWrap.querySelectorAll('.testimonials__dot');
+      const total = slides.length;
+      let index = 0;
+      let autoTimer = null;
+
+      function go(to) {
+        index = (to + total) % total;
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
+      }
+
+      function startAuto() {
+        stopAuto();
+        autoTimer = setInterval(() => go(index + 1), 7000);
+      }
+      function stopAuto() {
+        if (autoTimer) clearInterval(autoTimer);
+      }
+
+      prevBtn.addEventListener('click', () => { go(index - 1); startAuto(); });
+      nextBtn.addEventListener('click', () => { go(index + 1); startAuto(); });
+      dots.forEach((d) => d.addEventListener('click', () => {
+        go(parseInt(d.dataset.slide, 10));
+        startAuto();
+      }));
+
+      // Pause autoplay on hover for desktop users
+      const carousel = track.parentElement;
+      carousel.addEventListener('mouseenter', stopAuto);
+      carousel.addEventListener('mouseleave', startAuto);
+
+      // Touch / swipe support
+      let touchStartX = 0;
+      let touchEndX = 0;
+      track.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        stopAuto();
+      }, { passive: true });
+      track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 40) {
+          go(diff > 0 ? index + 1 : index - 1);
+        }
+        startAuto();
+      }, { passive: true });
+
+      startAuto();
+    })();
   </script>
 </body>
 </html>
