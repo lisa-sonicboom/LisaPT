@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
 
@@ -130,7 +130,7 @@
     <div class="approach__grid">
       <article class="approach__card">
         <div class="approach__num">i.</div>
-        <h3>Your history & goals</h3>
+        <h3>Your history &amp; goals</h3>
         <p>We start with your story: injuries, sleep, stress, current schedule, what's worked before and what hasn't.</p>
       </article>
       <article class="approach__card">
@@ -157,9 +157,6 @@
       <div class="training__head-text">
         <span class="section__kicker section__kicker--light">02 — Training</span>
         <h2 class="section__title">What we can work on <em>together</em>.</h2>
-        <p class="section__lede section__lede--light">
-          A mix, personalised to you. Pick one or blend two or three of these.
-        </p>
       </div>
       <figure class="training__image">
         <img src="img/lisa-handstand.jpg" alt="Lisa holding a handstand against a wall" />
@@ -176,20 +173,12 @@
         <p>Undo what desks and long periods of sitting have done. Move better, sit without aching, stand taller.</p>
       </div>
       <div class="training__item">
-        <h3>Conditioning &amp; HIIT</h3>
-        <p>Intervals, high-intensity, heart and lung work. Dialled to your level, not in a bootcamp style.</p>
-      </div>
-      <div class="training__item">
-        <h3>Return to Training</h3>
-        <p>Coming back from injury or a long pause, or a new city? We'll rebuild the base carefully.</p>
-      </div>
-      <div class="training__item">
         <h3>Longevity &amp; Everyday Strength</h3>
         <p>Train for the next thirty years, not the next thirty days. Joints, balance, resilience, energy.</p>
       </div>
       <div class="training__item">
         <h3>Calisthenics &amp; Skills</h3>
-        <p>Pull-ups, handstands, levers. Bodyweight skill work for the curious. Strength you can show.</p>
+        <p>Pull-ups, handstands, levers. Fun and effective. Strength you can show off.</p>
       </div>
     </div>
   </section>
@@ -213,13 +202,12 @@
         </h2>
         <p>
           I'm a personal trainer, working with clients who want to feel strong,
-          capable and at home in their body, not burn themselves out chasing
-          someone else's version of fit.
+          capable and at home in their body.
         </p>
         <p>
           My background spans strength training, calisthenics, running, mobility and conditioning.
           I'm certified through both the Australian and Portuguese fitness industry
-          and coach in English and Portuguese. Most of my clients are expats
+          and coach in English, Portuguese and Finnish. Most of my clients are expats
           and residents in Porto looking for something more considered than a
           commercial gym floor.
         </p>
@@ -320,9 +308,8 @@
           Real people. <em>Real progress.</em>
         </h2>
         <p>
-          Some of the people I've trained, taught and learned from along the way.
-          What I love most about this work is watching clients grow into themselves;
-          stronger, more confident, more at home in their bodies.
+          Some of the people I've trained along the way. What I love most about this work
+          is watching clients grow stronger, more confident, more at home in their bodies.
         </p>
       </div>
     </div>
@@ -552,12 +539,10 @@
         startAuto();
       }));
 
-      // Pause autoplay on hover for desktop users
       const carousel = track.parentElement;
       carousel.addEventListener('mouseenter', stopAuto);
       carousel.addEventListener('mouseleave', startAuto);
 
-      // Touch / swipe support
       let touchStartX = 0;
       let touchEndX = 0;
       track.addEventListener('touchstart', (e) => {
